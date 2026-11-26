@@ -1,54 +1,60 @@
-// ---------- Footer year ----------
-document.getElementById("year").textContent = new Date().getFullYear();
 
-// ---------- Mobile menu ----------
-const navLinks = document.getElementById("nav-links");
-document.getElementById("menu-toggle").addEventListener("click", () => {
-  navLinks.classList.toggle("open");
-});
-navLinks.querySelectorAll("a").forEach((a) =>
-  a.addEventListener("click", () => navLinks.classList.remove("open"))
-);
+/* =========================
+   MOBILE NAVBAR
+========================= */
 
-// ---------- Active nav link on scroll ----------
-const sections = document.querySelectorAll("section[id]");
-const links = navLinks.querySelectorAll("a");
-window.addEventListener("scroll", () => {
-  let current = "home";
-  sections.forEach((s) => {
-    if (window.scrollY >= s.offsetTop - 140) current = s.id;
-  });
-  links.forEach((a) => a.classList.toggle("active", a.getAttribute("href") === "#" + current));
+const menuToggle = document.getElementById("menu-toggle");
+const navMenu = document.getElementById("nav-menu");
+
+menuToggle.addEventListener("click", function () {
+    navMenu.classList.toggle("active");
 });
 
-// ---------- Scroll reveal + skill bars ----------
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("show");
-      entry.target.querySelectorAll(".fill").forEach((bar) => {
-        bar.style.width = bar.dataset.width + "%";
-      });
-    }
-  });
-}, { threshold: 0.15 });
-document.querySelectorAll(".reveal").forEach((el) => observer.observe(el));
+/* Close menu after clicking a link */
 
-// ---------- Back to top button ----------
-const toTop = document.getElementById("to-top");
-window.addEventListener("scroll", () => {
-  toTop.style.display = window.scrollY > 400 ? "block" : "none";
+const navLinks = document.querySelectorAll("#nav-menu a");
+
+navLinks.forEach(function (link) {
+    link.addEventListener("click", function () {
+        navMenu.classList.remove("active");
+    });
 });
-toTop.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
 
-// ---------- Contact form (opens the visitor's email app) ----------
-document.getElementById("contact-form").addEventListener("submit", (e) => {
-  e.preventDefault();
-  const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
-  const message = document.getElementById("message").value;
-  const subject = encodeURIComponent("Portfolio message from " + name);
-  const body = encodeURIComponent(message + "\n\nFrom: " + name + " (" + email + ")");
-  // Replace with your real email
-  window.location.href = "mailto:your-email@example.com?subject=" + subject + "&body=" + body;
+/* =========================
+   DYNAMIC COPYRIGHT YEAR
+========================= */
+
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+/* =========================
+   CONTACT FORM
+========================= */
+
+const contactForm = document.getElementById("contact-form");
+const formStatus = document.getElementById("form-status");
+
+contactForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    const recipient = "your-email@example.com";
+
+    const subject = encodeURIComponent("Portfolio Contact - " + name);
+
+    const body = encodeURIComponent(
+        "Name: " + name +
+        "\nEmail: " + email +
+        "\n\nMessage:\n" + message
+    );
+
+    formStatus.textContent = "Opening your email application...";
+
+    window.location.href =
+        "mailto:" + recipient +
+        "?subject=" + subject +
+        "&body=" + body;
 });

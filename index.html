@@ -1,241 +1,423 @@
-< !DOCTYPE html>
-    <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="Portfolio of Pradyumna" />
-        <title>Pradyumna | Portfolio</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
-            rel="stylesheet" />
-        <link rel="stylesheet" href="style.css" />
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pradyumna | Java Developer</title>
+    <meta name="description"
+        content="Portfolio of an aspiring Java developer skilled in Java, JSP, Servlets, JDBC, MySQL and web development.">
+    <link rel="stylesheet" href="style.css">
+</head>
 
-    <body>
+<body>
 
-        <!-- NAVBAR -->
-        <header class="navbar">
-            <a href="#home" class="logo"><span class=""></span>Pradyumna</a>
-            <nav>
-                <ul id="nav-links">
-                    <li><a href="#home" class="active">Home</a></li>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#home" class="logo">Pradyumna<span>.</span></a>
+
+            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">
+                ☰
+            </button>
+
+            <nav id="nav-menu">
+                <ul>
+                    <li><a href="#home">Home</a></li>
                     <li><a href="#about">About Me</a></li>
                     <li><a href="#skills">Skills</a></li>
+                    <li><a href="#education">Education</a></li>
                     <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact Me</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
-            <a href="#contact" class="nav-cta">Hire Me <span class="dot"></span></a>
-            <button id="menu-toggle" aria-label="Open menu">☰</button>
-        </header>
+        </div>
+    </header>
 
-        <!-- HERO -->
-        <section id="home" class="hero">
-            <div class="hero-grid">
+    <!-- Home -->
+    <section id="home" class="hero">
+        <div class="container hero-content">
 
-                <h1 class="headline">
-                    <span>Aspiring</span>
-                    <span class="outline">java</span>
-                    <span>Developer</span>
-                </h1>
+            <div class="hero-text">
+                <p class="small-heading">WELCOME TO MY PORTFOLIO</p>
 
+                <h1>Hello, I'm <span>Pradyumna</span></h1>
 
-                <div class="hero-info">
-                    <h2> Java <br />Software Developer</h2>
-                    <p>
-                        I am an aspiring Java Developer with knowledge of Core Java, JSP, Servlets, JDBC, MySQL and Web
-                        Technologies. I enjoy building practical applications and solving programming problems.
-                    </p>
-                    <div class="buttons">
-                        <a href="#projects" class="btn solid">View My Work</a>
-                        <a href="Pradyumna Barik RESUME.pdf" class="btn ghost" download>Download Resume</a>
+                <h2>Aspiring Java Developer</h2>
+
+                <p class="hero-description">
+                    MCA student and aspiring software developer with knowledge
+                    of Java and web technologies. I enjoy building applications,
+                    solving programming problems and learning new technologies.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn primary-btn">View Projects</a>
+                    <a href="#contact" class="btn secondary-btn">Contact Me</a>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://github.com/" target="_blank">GitHub ↗</a>
+                    <a href="https://www.linkedin.com/" target="_blank">LinkedIn ↗</a>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <div class="image-frame">
+                    <img src="profile.jpg" alt="Developer profile photo"
+                        onerror="this.style.display='none'; this.parentElement.classList.add('no-image');">
+                    <div class="image-placeholder">
+                        <span>&lt;/&gt;</span>
+                        <p>Java Developer</p>
                     </div>
                 </div>
-
             </div>
 
-            <div class="hero-bottom">
-                <p class="role"><span class="text"></span> Pradyumna - Web Developer</p>
-                <p class="trust">Building simple, reliable and good-looking web projects.</p>
-                <div class="hero-social">
-                    <a href="https://github.com/pradyumnakumar629-cpu" target="_blank" rel="noopener"><i></i>Github</a>
-                    <a href="https://www.linkedin.com/in/pradyumna-kumar-barik-214880371/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3B5ZNK6t5MT6SUlJKGn1oegQ%3D%3D"
-                        target="_blank" rel="noopener"><i></i>Linkedin</a>
-                    <a href="mailto:pradyumnakumar629@gmail.com"><i></i>Email</a>
-                </div>
-            </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- ABOUT -->
-        <section id="about" class="section reveal">
-            <h2 class="title">About <span>Me</span></h2>
+    <!-- About -->
+    <section id="about" class="section">
+        <div class="container">
+
+            <div class="section-heading">
+                <p class="small-heading">GET TO KNOW ME</p>
+                <h2>About <span>Me</span></h2>
+            </div>
+
             <div class="about-grid">
+
                 <div class="about-text">
-                    <p>
-                        I am an MCA graduate and an aspiring Software Developer with a strong interest in Web
-                        Development
-                        and problem solving.I have knowledge of HTML,CSS, and Java Script. I enjoy learning new
-                        technologies, building creative projects, and improving my programming skills. I am passionate
-                        about
-                        growing as a developer and looking forward to opportunities where I can apply my knowledge and
-                        gain
-                        real-world experience.
-                    </p>
-                    <p>
-                        Outside of coding, I enjoy playing cricket , exploring new technologies, and learning new skills
-                        . I
-                        am passionate about problem solving and continuously improving myself. I also enjoy building
-                        creative
-                        projects and staying updated with the latest trends in technology.
-                    </p>
-                </div>
-                <ul class="facts">
-                    <li><strong>Location:</strong> India</li>
-                    <li><strong>Education:</strong> Masters in Computer Application/ KIIt deemed to be university</li>
-                    <li><strong>Interests:</strong> Web development, problem solving</li>
-                    <li><strong>Status:</strong> Open to internships / jobs</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- SKILLS -->
-        <section id="skills" class="section reveal alt">
-            <h2 class="title">My <span>Skills</span></h2>
-            <div class="skills">
-                <div class="skill">
-                    <div class="skill-top"><span>HTML</span><span>85%</span></div>
-                    <div class="bar">
-                        <div class="fill" data-width="85"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <div class="skill-top"><span>CSS</span><span>80%</span></div>
-                    <div class="bar">
-                        <div class="fill" data-width="80"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <div class="skill-top"><span>JavaScript</span><span>70%</span></div>
-                    <div class="bar">
-                        <div class="fill" data-width="70"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <div class="skill-top"><span>Git &amp; GitHub</span><span>65%</span></div>
-                    <div class="bar">
-                        <div class="fill" data-width="65"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Education Section -->
-        <section id="education" class="education">
-            <h2 class="section-title">My Education</h2>
-            <p class="education-subtitle">
-                My academic journey and qualifications
-            </p>
-
-            <div class="education-container">
-
-                <!-- MCA -->
-                <div class="education-card">
-                    <div class="education-icon">🎓</div>
-                    <span class="education-year">2024 - 2026</span>
-
-                    <h3>Master of Computer Applications (MCA)</h3>
-
-                    <h4>KIIT Deemed to be University</h4>
+                    <h3>Aspiring Java Developer</h3>
 
                     <p>
-                        Postgraduate Degree
+                        I am an aspiring Java Developer with an academic background
+                        in Computer Applications. I have knowledge of Core Java,
+                        JSP, Servlets, JDBC, MySQL, HTML and CSS.
                     </p>
-                </div>
-
-                <!-- BCA -->
-                <div class="education-card">
-                    <div class="education-icon">💻</div>
-                    <span class="education-year">2021 - 2024</span>
-
-                    <h3>Bachelor of Computer Applications (BCA)</h3>
-
-                    <h4>NIIS Group of Institute</h4>
 
                     <p>
-                        Undergraduate Degree
+                        I enjoy developing web applications, learning new technologies
+                        and improving my programming and problem-solving skills
+                        through projects and coding practice.
                     </p>
+
+                    <p>
+                        My goal is to begin my career as a software developer
+                        and contribute to real-world software development projects.
+                    </p>
+
+                    <a href="#projects" class="text-link">
+                        Explore my projects →
+                    </a>
+                </div>
+
+                <div class="about-profile">
+                    <p class="profile-label">QUICK PROFILE</p>
+                    <h3>Java Developer</h3>
+
+                    <p class="profile-description">
+                        Computer Applications graduate with an interest
+                        in Java-based application development.
+                    </p>
+
+                    <div class="facts">
+                        <div class="fact">
+                            <span>Degree</span>
+                            <strong>MCA</strong>
+                        </div>
+
+                        <div class="fact">
+                            <span>University</span>
+                            <strong>KIIT</strong>
+                        </div>
+
+                        <div class="fact">
+                            <span>Primary Skills</span>
+                            <strong>Java & Web Technologies</strong>
+                        </div>
+
+                        <div class="fact">
+                            <span>Project</span>
+                            <strong>Online Medicine Store</strong>
+                        </div>
+
+                        <div class="fact">
+                            <span>Career Goal</span>
+                            <strong>Software Developer</strong>
+                        </div>
+                    </div>
                 </div>
 
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- PROJECTS -->
-        <section id="projects" class="section reveal">
-            <h2 class="title">My <span>Projects</span></h2>
-            <div class="cards">
+    <!-- Skills -->
+    <section id="skills" class="section alternate-section">
+        <div class="container">
 
-                <article class="card">
-                    <h3>Project One</h3>
-                    <p>Short description of what it does and the problem it solves.</p>
-                    <div class="tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
-                    <div class="links">
-                        <a href="https://pradyumnakumar629-cpu.github.io/Project-Demo/" target="_blank"
-                            rel="noopener">GitHub</a>
-                        <a href="https://pradyumnakumar629-cpu.github.io/cricket-scorer/" target="_blank"
-                            rel="noopener">Live
-                            Demo</a>
+            <div class="section-heading">
+                <p class="small-heading">WHAT I KNOW</p>
+                <h2>My <span>Skills</span></h2>
+            </div>
+
+            <div class="skills-grid">
+
+                <div class="skill-card">
+                    <div class="skill-icon">J</div>
+                    <h3>Java</h3>
+                    <p>Core Java, OOP Concepts</p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">&lt;/&gt;</div>
+                    <h3>JSP</h3>
+                    <p>Java Server Pages</p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">S</div>
+                    <h3>Servlets</h3>
+                    <p>Server-side Java Development</p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">DB</div>
+                    <h3>JDBC</h3>
+                    <p>Java Database Connectivity</p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">SQL</div>
+                    <h3>MySQL</h3>
+                    <p>Database Management</p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">H</div>
+                    <h3>HTML</h3>
+                    <p>Web Page Structure</p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">C</div>
+                    <h3>CSS</h3>
+                    <p>Web Styling & Responsive Design</p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">Git</div>
+                    <h3>Git & GitHub</h3>
+                    <p>Version Control</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="section education-section">
+        <div class="container">
+
+            <div class="section-heading">
+                <p class="small-heading">MY ACADEMIC JOURNEY</p>
+                <h2>My <span>Education</span></h2>
+            </div>
+
+            <div class="education-layout">
+
+                <div class="education-content">
+
+                    <div class="education-card">
+                        <span class="education-year">2024 – 2026</span>
+                        <h3>Master of Computer Applications (MCA)</h3>
+                        <p class="institution">KIIT Deemed to be University</p>
+                        <p>
+                            Studying computer applications, programming,
+                            software development and related technologies.
+                        </p>
+                    </div>
+
+                    <div class="education-card">
+                        <span class="education-year">2021 – 2024</span>
+                        <h3>Bachelor of Computer Applications (BCA)</h3>
+                        <p class="institution">NIIS Group of Institute</p>
+                        <p>
+                            Built a foundation in computer science,
+                            programming and application development.
+                        </p>
+                    </div>
+
+                </div>
+
+                <div class="education-art">
+                    <div class="developer-art">
+                        <div class="screen">
+                            <div class="screen-top"></div>
+                            <div class="code-line green"></div>
+                            <div class="code-line short"></div>
+                            <div class="code-line purple"></div>
+                            <div class="code-line green short"></div>
+                            <div class="code-line purple short"></div>
+                        </div>
+
+                        <div class="desk"></div>
+                        <div class="laptop-base"></div>
+
+                        <div class="art-caption">
+                            <span>&lt;/&gt;</span>
+                            <p>Learning. Building. Growing.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section alternate-section">
+        <div class="container">
+
+            <div class="section-heading">
+                <p class="small-heading">WHAT I HAVE BUILT</p>
+                <h2>My <span>Projects</span></h2>
+            </div>
+
+            <div class="projects-grid">
+
+                <article class="project-card">
+                    <div class="project-visual">
+                        <span class="project-symbol">💊</span>
+                        <span class="project-visual-text">ONLINE MEDICINE STORE</span>
+                    </div>
+
+                    <div class="project-info">
+                        <p class="project-tag">JAVA WEB APPLICATION</p>
+                        <h3>Online Medicine Store</h3>
+
+                        <p>
+                            A web-based medicine store application designed
+                            to provide an online platform for browsing medicines
+                            and managing medicine-related information.
+                        </p>
+
+                        <div class="project-tech">
+                            <span>Java</span>
+                            <span>JSP</span>
+                            <span>Servlets</span>
+                            <span>JDBC</span>
+                            <span>MySQL</span>
+                        </div>
+
+                        <a href="https://github.com/" target="_blank" class="text-link">GitHub Repository ↗</a>
                     </div>
                 </article>
 
-                <article class="card">
-                    <h3>Project Two</h3>
-                    <p>Short description of what it does and the problem it solves.</p>
-                    <div class="tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
-                    <div class="links">
-                        <a href="https://pradyumnakumar629-cpu.github.io/Portfolio-Public-2026/" target="_blank"
-                            rel="noopener">GitHub</a>
-                        <a href="https://pradyumnakumar629-cpu.github.io/project-two" target="_blank"
-                            rel="noopener">Live
-                            Demo</a>
+                <article class="project-card project-coming">
+                    <div class="project-visual">
+                        <span class="project-symbol">&lt;/&gt;</span>
+                        <span class="project-visual-text">MORE PROJECTS</span>
+                    </div>
+
+                    <div class="project-info">
+                        <p class="project-tag">COMING SOON</p>
+                        <h3>Future Project</h3>
+
+                        <p>
+                            I am continuing to explore new technologies
+                            and build more projects to improve my
+                            software development skills.
+                        </p>
+
+                        <div class="project-tech">
+                            <span>Learning</span>
+                            <span>Building</span>
+                            <span>Improving</span>
+                        </div>
                     </div>
                 </article>
 
-                <!-- <article class="card">
-                    <h3>Project Three</h3>
-                    <p>Short description of what it does and the problem it solves.</p>
-                    <div class="tags"><span>HTML</span><span>CSS</span><span>JS</span></div>
-                    <div class="links">
-                        <a href="https://github.com/your-username/project-three" target="_blank"
-                            rel="noopener">GitHub</a>
-                        <a href="https://your-username.github.io/project-three" target="_blank" rel="noopener">Live
-                            Demo</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+        <div class="container">
+
+            <div class="section-heading">
+                <p class="small-heading">LET'S CONNECT</p>
+                <h2>Contact <span>Me</span></h2>
+            </div>
+
+            <div class="contact-grid">
+
+                <div class="contact-text">
+                    <h3>Let's get in touch</h3>
+
+                    <p>
+                        Feel free to contact me regarding opportunities,
+                        projects or professional discussions.
+                    </p>
+
+                    <div class="contact-item">
+                        <span class="contact-icon">@</span>
+                        <div>
+                            <h4>Email</h4>
+                            <p>your-email@example.com</p>
+                        </div>
                     </div>
-                </article> -->
+
+                    <div class="contact-item">
+                        <span class="contact-icon">in</span>
+                        <div>
+                            <h4>LinkedIn</h4>
+                            <p>Connect with me on LinkedIn</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <span class="contact-icon">GH</span>
+                        <div>
+                            <h4>GitHub</h4>
+                            <p>Explore my code and projects</p>
+                        </div>
+                    </div>
+                </div>
+
+                <form id="contact-form" class="contact-form">
+
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" placeholder="Enter your name" required>
+
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+
+                    <label for="message">Message</label>
+                    <textarea id="message" rows="5" placeholder="Write your message..." required></textarea>
+
+                    <button type="submit" class="btn primary-btn">
+                        Send Message →
+                    </button>
+
+                    <p id="form-status"></p>
+                </form>
 
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- CONTACT -->
-        <section id="contact" class="section reveal alt">
-            <h2 class="title">Contact <span>Me</span></h2>
-            <p class="center">Have a project or opportunity in mind? Send me a message.</p>
-            <form id="contact-form" class="form">
-                <input type="text" id="name" placeholder="Your name" required />
-                <input type="email" id="email" placeholder="Your email" required />
-                <textarea id="message" rows="5" placeholder="Your message" required></textarea>
-                <button type="submit" class="btn solid">Send Message</button>
-            </form>
-        </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>© <span id="year"></span> Pradyumna | Designed & Built with ❤️</p>
+            <a href="#home">Back to top ↑</a>
+        </div>
+    </footer>
 
-        <footer>
-            <p>© <span id="year"></span> Pradyumna. Built with HTML, CSS &amp; JavaScript.</p>
-        </footer>
+    <script src="script.js"></script>
+</body>
 
-        <button id="to-top" aria-label="Back to top">↑</button>
-
-        <script src="script.js"></script>
-    </body>
-
-    </html>
+</html>
