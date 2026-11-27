@@ -954,3 +954,12 @@ nav a:hover {
         aspect-ratio: 3 / 2;
     }
 }
+.contact-item a {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}

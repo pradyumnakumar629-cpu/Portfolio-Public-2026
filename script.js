@@ -41,7 +41,7 @@ contactForm.addEventListener("submit", function (event) {
     const email = document.getElementById("email").value.trim();
     const message = document.getElementById("message").value.trim();
 
-    const recipient = "your-email@example.com";
+    const recipient = "pradyumnakumar629@gmail.com";
 
     const subject = encodeURIComponent("Portfolio Contact - " + name);
 
